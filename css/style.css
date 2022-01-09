@@ -27,7 +27,7 @@
   box-sizing: border-box;
 }
 #header img{width: 56px; height: 34px;}
-#header h1 {font-size: 1.8vw; display: inline-block; font-weight: 700;}
+#header h1 {font-size: 1.8vw; display: inline-block; font-weight: 700; align : left}
 #header h1 a {color: #000;}
 #header .menu ul {overflow: hidden; display: inline-block; display: flex; align-items: center;}
 #header .menu ul li {float: left; margin-left: 20px; display: inline-block; position: relative;}

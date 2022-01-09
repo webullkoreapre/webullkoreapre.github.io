@@ -4,8 +4,8 @@
 #header {}
 #intro {position: relative; z-index: 8000; background-color: #ebebeb; overflow: hidden;}
 #about {position: relative; z-index: 8000; height: 4000px; background-color: #fff; overflow: hidden;}
-#work {overflow: hidden; position: relative; z-index: 800; height: 13000px;}
-#animation {overflow: hidden; position: relative; z-index: 700; height: 10000px; background-color: #fff;}
+#work {overflow: hidden; position: relative; z-index: 800; height: 130px;}
+#animation {overflow: hidden; position: relative; z-index: 700; height: 100px; background-color: #fff;}
 #footer {overflow: hidden; position: relative; z-index: 600;}
 
 /* container */

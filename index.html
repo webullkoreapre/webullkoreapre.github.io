@@ -58,4 +58,314 @@
         </div>
     </section>
     <!-- //intro -->
+    <section id="about">
+        <div class="ab-tit">
+            <h2
+                data-500 = "transform: translateX(0%)"
+                data-3900 = "transform: translateX(-100%)"
+            >About</h2>
+            <div class="abtit-img">
+                <div class="img"></div>
+            </div>
+        </div>
+        <!-- //ab-tit -->
+        <div class="container">
+            <div class="ab-cont">
+                <div class="ab-item ab1">
+                    <div class="ab-img-wrap"
+                        data-1500 = "transform: skew(-4deg, -4deg);"
+                        data-2500 = "transform: skew(4deg, 4deg);"
+                    >
+                        <span>
+                            <div class="ab-img abimg1"></div>
+                        </span>
+                    </div>
+                    <div class="ab-desc de1">
+                        <h4><span><strong>E</strong>ducation</span></h4>
+                        <p>
+                            <span>
+                            Coming SOON
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- //ab-cont -->
+        </div>
+    </section>
+    <!-- //about -->
+
+    <section id="work">
+        <div class="container">
+            <div class="row">
+                <div class="work">
+                    <div class="wktit-wrap"
+                        data-7500 = "left: 0%;"
+                        data-8500 = "left: -110%;"
+                    >
+                        <div class="wk-tit">
+                            <span>
+                                <svg width="80" height="60" viewBox="5 0 80 60" class="wv1">
+                                    <path class="wave" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" d="M 0 37.5 c 7.684299348848887 0 7.172012725592294 -15 15 -15 s 7.172012725592294 15 15 15 s 7.172012725592294 -15 15 -15 s 7.172012725592294 15 15 15 s 7.172012725592294 -15 15 -15 s 7.172012725592294 15 15 15 s 7.172012725592294 -15 15 -15 s 7.172012725592294 15 15 15 s 7.172012725592294 -15 15 -15 s 7.172012725592294 15 15 15 s 7.172012725592294 -15 15 -15 s 7.172012725592294 15 15 15 s 7.172012725592294 -15 15 -15 s 7.172012725592294 15 15 15 s 7.172012725592294 -15 15 -15" $=1$=010.0" />
+                                </svg>
+                            </span>
+                            <h4 class="animation-title">
+                                <strong><span>p</span><span>r</span><span>o</span><span>j</span><span>e</span><span>c</span><span>t</span></strong>
+                            </h4>
+                            <span>
+                                <svg width="80" height="60" viewBox="5 0 80 60" class="wv2">
+                                    <path class="wave" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" d="M 0 37.5 c 7.684299348848887 0 7.172012725592294 -15 15 -15 s 7.172012725592294 15 15 15 s 7.172012725592294 -15 15 -15 s 7.172012725592294 15 15 15 s 7.172012725592294 -15 15 -15 s 7.172012725592294 15 15 15 s 7.172012725592294 -15 15 -15 s 7.172012725592294 15 15 15 s 7.172012725592294 -15 15 -15 s 7.172012725592294 15 15 15 s 7.172012725592294 -15 15 -15 s 7.172012725592294 15 15 15 s 7.172012725592294 -15 15 -15 s 7.172012725592294 15 15 15 s 7.172012725592294 -15 15 -15" />
+                                </svg>
+                            </span>
+                        </div>
+                        <!-- //wk-tit -->
+                    </div>
+                    <div class="wk-wrap">
+                        <div class="wk-cont"
+                            data-10000 = "left: 0vw"
+                            data-20000 = "left: -500vw"
+                        >
+                            <div class="wk-item wk1">
+                                <div class="wk-img wimg1">
+                                    <img src="img/w1.png" alt="webstandardsite">
+                                </div>
+                                <div class="wk-desc wd1">
+                                    <em><span>project</span></em>
+                                    <h3><span>WEBULL project</span></h3>
+                                    <p>
+                                        <span>
+                                            Coming SOON
+                                        </span>
+                                    </p>
+                                </div>
+                        <!-- //wk-cont -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //work -->
 </body>
+</html>
+
+<!---!>
+    <script src="js/jquery.min_1.12.4.js"></script>
+    <script src="js/skrollr.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script>
+            //skrollr
+                var s = skrollr.init({
+                    edgeStrategy: 'set',
+                    easing: 'linear'
+                });
+
+            //nav
+                var wHeight = $(window).height();
+                var dHeight = $(document).height();
+                var navHeight = $("#header").outerHeight();
+                var lastScrollTop = 0;
+                var moveScroll;
+
+                $(window).scroll(function(event){
+                    moveScroll = true;  
+                });
+
+                setInterval(function(){
+                    if(moveScroll){
+                        hasScroll();
+                        moveScroll = false;
+                    }
+                },250);
+
+                function hasScroll(){
+                    var wScroll = $(this).scrollTop();
+
+                    if(wScroll > lastScrollTop && wScroll > navHeight){
+                        $("#header").addClass("on");
+                    } else {
+                        if(wScroll + wHeight < dHeight)
+                            $("#header").removeClass("on");
+                    }
+                    lastScrollTop = wScroll;
+                }
+
+
+            //intro
+                let int1 = $(".int1").text().split("").join("</span><span aria-hidden='true'>");
+                int1 = "<span aria-hidden='true'>" + int1 + "</span>"
+                $(".int1").html(int1);
+                
+                let int2 = $(".int2").text().split("").join("</span><span aria-hidden='true'>");
+                int2 = "<span aria-hidden='true'>" + int2 + "</span>"
+                $(".int2").html(int2);
+                
+                let int3 = $(".int3").text().split("").join("</span><span aria-hidden='true'>");
+                int3 = "<span aria-hidden='true'>" + int3 + "</span>"
+                $(".int3").html(int3);
+                
+                let int4 = $(".int4").text().split("").join("</span><span aria-hidden='true'>");
+                int4 = "<span aria-hidden='true'>" + int4 + "</span>"
+                $(".int4").html(int4);
+                
+                setTimeout(start ,500);
+                
+                function start(){
+                    let tl = new TimelineMax();
+                    tl.staggerFromTo(".intro span", 0.8, 
+                    {ease: Back.easeOut.config(1.7), delay: .5, opacity: 0, skewX: "70", y: 80},
+                    {ease: Back.easeOut.config(1.7), delay: .5, opacity: 1, skewX: "0", y: 0},0.05); 
+                }
+
+            //ab-tit img
+                $(window).scroll(function(){
+                    let wScroll = $(window).scrollTop();
+                    $(".scroll").text(wScroll);
+                    
+                    let offset1 = (wScroll - $(".ab-tit .abtit-img").offset().top) * 0.2;
+                    $(".ab-tit .abtit-img .img").css({"transform":"translateY("+ -offset1+"px)"});
+                }); 
+
+
+
+                $(window).scroll(function(){
+                    let wScroll = $(window).scrollTop();
+                    $(".scroll").text(wScroll);
+
+            //제목타이틀
+                if(wScroll >=  5000){
+                    $('.work').addClass("show");
+                }else {
+                    $('.work').removeClass("show");
+                }
+                if(wScroll >=  20000){
+                    $('.ani').addClass("show");
+                }else {
+                    $('.ani').removeClass("show");
+                }
+                if(wScroll >=  30000){
+                    $('.intro2').addClass("show");
+                }else {
+                    $('.intro2').removeClass("show");
+                }
+                if(wScroll >=  34000){
+                    $('.contact').addClass("show");
+                }else {
+                    $('.contact').removeClass("show");
+                }
+
+            //about
+            var adesc1 = $('.ab1 .de1');
+            var adesc2 = $('.ab2 .de2');
+            var adesc3 = $('.ab3 .de3');
+            var adesc4 = $('.ab4 .de4');
+
+            if(wScroll >= 1500){
+                $(adesc1).addClass("show");
+                $('.abimg1').addClass("show");
+            }else {
+                $(adesc1).removeClass("show");
+                $('.abimg1').removeClass("show");
+            }
+            if(wScroll >= 2300){
+                $(adesc2).addClass("show");
+                $('.abimg2').addClass("show");
+            }else {
+                $(adesc2).removeClass("show");
+                $('.abimg2').removeClass("show");
+            }
+            if(wScroll >= 2800){
+                $(adesc3).addClass("show");
+                $('.abimg3').addClass("show");
+            }else {
+                $(adesc3).removeClass("show");
+                $('.abimg3').removeClass("show");
+            }
+            if(wScroll >= 3500){
+                $(adesc4).addClass("show");
+                $('.abimg4').addClass("show");
+            }else {
+                $(adesc4).removeClass("show");
+                $('.abimg4').removeClass("show");
+            }
+
+
+            //work
+                var wdesc1 = $('.wk1 > .wd1');
+                var wdesc2 = $('.wk2 > .wd2');
+                var wdesc3 = $('.wk3 > .wd3');
+                var wdesc4 = $('.wk4 > .wd4');
+                var wdesc5 = $('.wk5 > .wd5');
+                if(wScroll >=  8000){
+                    $(wdesc1).addClass("show");
+                    $('.wimg1').addClass("show");
+                }else {
+                    $(wdesc1).removeClass("show");
+                    $('.wimg1').removeClass("show");
+                }
+                if(wScroll >=  11000){
+                    $(wdesc2).addClass("show");
+                    $('.wimg2').addClass("show");
+                }else {
+                    $(wdesc2).removeClass("show");
+                    $('.wimg2').removeClass("show");
+                }
+                if(wScroll >= 13000){
+                    $(wdesc3).addClass("show");
+                    $('.wimg3').addClass("show");
+                }else {
+                    $(wdesc3).removeClass("show");
+                    $('.wimg3').removeClass("show");
+                }
+                if(wScroll >= 15000){
+                    $(wdesc4).addClass("show");
+                    $('.wimg4').addClass("show");
+                }else {
+                    $(wdesc4).removeClass("show");
+                    $('.wimg4').removeClass("show");
+                }
+                if(wScroll >= 17000){
+                    $(wdesc5).addClass("show");
+                    $('.wimg5').addClass("show");
+                }else {
+                    $(wdesc5).removeClass("show");
+                    $('.wimg5').removeClass("show");
+                }
+
+
+
+
+
+        });
+
+        //애니메이션 바꾸기
+            $(".name1").click(function(e){
+                e.preventDefault();
+                $(".ani-right .frame1").css("display","block");
+                $(".ani-right .frame2").css("display","none");
+                $(".ani-right .frame3").css("display","none");
+                $(".ani-right .frame4").css("display","none");
+            });
+            $(".name2").click(function(e){
+                e.preventDefault();
+                $(".ani-right .frame1").css("display","none");
+                $(".ani-right .frame2").css("display","block");
+                $(".ani-right .frame3").css("display","none");
+                $(".ani-right .frame4").css("display","none");
+            });
+            $(".name3").click(function(e){
+                e.preventDefault();
+                $(".ani-right .frame1").css("display","none");
+                $(".ani-right .frame2").css("display","none");
+                $(".ani-right .frame3").css("display","block");
+                $(".ani-right .frame4").css("display","none");
+            });
+            $(".name4").click(function(e){
+                e.preventDefault();
+                $(".ani-right .frame1").css("display","none");
+                $(".ani-right .frame2").css("display","none");
+                $(".ani-right .frame3").css("display","none");
+                $(".ani-right .frame4").css("display","block");
+            });
+    </script>
+</body>
+</html>
